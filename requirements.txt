@@ -1,3 +1,8 @@
 opencv-python
 numpy
 imutils
+onnx
+pillow
+matplotlib
+onnxruntime
+scipy

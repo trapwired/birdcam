@@ -4,6 +4,8 @@ __pycache__/
 *$py.class
 
 /out
+/in
+/model
 
 # C extensions
 *.so
@@ -166,3 +168,4 @@ cython_debug/
 /.idea/modules.xml
 /.idea/inspectionProfiles/profiles_settings.xml
 /.idea/vcs.xml
+/model/
