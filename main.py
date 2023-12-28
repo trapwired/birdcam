@@ -2,7 +2,6 @@ import os.path
 import time
 
 import cv2
-import imutils
 
 from CnnModel import CnnModel
 
@@ -33,7 +32,8 @@ def detect_birds(capture_device, cnn_model, output_directory_path):
         rotated_image = cv2.rotate(start_frame, cv2.ROTATE_180)
         try:
             res = cnn_model.infer_image(rotated_image)
-        except Exception:
+        except Exception as e:
+            print(e)
             break
         if res:
             img_name = "bird_picture_{}.png".format(IMAGE_COUNTER)
