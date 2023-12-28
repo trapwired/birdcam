@@ -34,7 +34,7 @@ def detect_birds(capture_device, cnn_model, output_directory_path):
             res = cnn_model.infer_image(rotated_image)
         except Exception as e:
             print(e)
-            break
+            continue
         if res:
             img_name = "bird_picture_{}.png".format(IMAGE_COUNTER)
             path = os.path.join(output_directory_path, img_name)
@@ -45,13 +45,18 @@ def detect_birds(capture_device, cnn_model, output_directory_path):
                 exit()
 
 
+def create_run_directory():
+    # create new folder for each run
+    dir_name = time.strftime("%Y%m%d-%H%M%S")
+    new_directory_path = os.path.join('out', dir_name)
+    os.mkdir(new_directory_path)
+    return new_directory_path
+
+
 if __name__ == '__main__':
     model = CnnModel()
     cap = cv2.VideoCapture(0)
 
-    # create new folder for each run
-    dir_name = time.strftime("%Y%m%d-%H%M%S")
-    dir_path = os.path.join('out', dir_name)
-    os.mkdir(dir_path)
+    dir_path = create_run_directory()
 
     detect_birds(cap, model, dir_path)
