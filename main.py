@@ -31,7 +31,10 @@ def detect_birds(capture_device, cnn_model, output_directory_path):
         _, start_frame = capture_device.read()
         rotated_image = cv2.rotate(start_frame, cv2.ROTATE_180)
         try:
+            # tic = time.perf_counter()
             res = cnn_model.infer_image(rotated_image)
+            # toc = time.perf_counter()
+            # print(f"one inference took {toc - tic:0.4f} seconds")
         except Exception as e:
             print(e)
             continue

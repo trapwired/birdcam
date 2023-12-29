@@ -11,5 +11,6 @@ For the detection, a pretrained CNN, yoloV4 is used. Credits to the code belong 
 - To run the while-True loop, let run the main.py file
 
 # additional information
-- on my MacbookPro, M2Max, it took about 0.2sec to infer an image, after which a 0.3 (configurable) timeout will wait before detecting the next bird, to avoid having too many pictures of one bird.
+- on my MacbookPro (M2Max), as well as my windows computer, it took about 0.2sec to infer an image, after which a 0.3 (configurable) timeout will wait before detecting the next bird, to avoid having too many pictures of one bird.
+  - I left in the timing code (main.py, L:34ff) to uncomment, if you want to run your own timing tests
 - since the stored pictures are just hdmi-grabs, the quality is not at its best - triggering a picture on the camera would definitely work better
