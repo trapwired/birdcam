@@ -169,3 +169,5 @@ cython_debug/
 /.idea/inspectionProfiles/profiles_settings.xml
 /.idea/vcs.xml
 /model/
+/.idea/deployment.xml
+/.idea/inspectionProfiles/Project_Default.xml

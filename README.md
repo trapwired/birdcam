@@ -7,6 +7,7 @@ For the detection, a pretrained CNN, yoloV4 is used. Credits to the code belong 
 - Use requirements.txt to install the necessary python-packages
 - for yoloV4 to work, you have to download the [model](https://github.com/onnx/models/tree/main/validated/vision/object_detection_segmentation/yolov4) and add it to the ./model folder
 - the inference-code is trimmed to a means to be as quick as possible (you can define a threshold for confidence, and also the class to detect - 14 is birds)
+- create a new out folder in the root directory
 - To run the while-True loop, let run the main.py file
 
 # additional information

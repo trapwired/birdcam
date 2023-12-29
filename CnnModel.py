@@ -102,7 +102,7 @@ class CnnModel:
     input_size = 416
 
     def __init__(self):
-        self.sess = rt.InferenceSession("./model/Yolov4Model.onnx")
+        self.sess = rt.InferenceSession("./model/yolov4.onnx")
 
         outputs = self.sess.get_outputs()
         self.output_names = list(map(lambda output: output.name, outputs))
