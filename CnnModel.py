@@ -268,7 +268,7 @@ class CnnModel:
         pred_bbox = self.postprocess_bbbox(detections, self.ANCHORS, self.STRIDES, self.XYSCALE)
         bboxes = self.postprocess_boxes(pred_bbox, original_image_size, self.input_size, 0.25)
         bboxes = self.nms(bboxes, 0.213, method='nms')
-        return class_of_interest_detected(bboxes, 14, 0.95)
+        return class_of_interest_detected(bboxes, 14, 0.97)
         # image = draw_bbox(original_image, bboxes)
 
         # image = Image.fromarray(image)
