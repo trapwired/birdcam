@@ -13,11 +13,11 @@ app = Flask(__name__)
 def take_picture():
     print('Take Picture')
     GPIO.output(focus_pin, True)
-    time.sleep(1)
+    time.sleep(0.1)
     GPIO.output(picture_pin, True)
-    time.sleep(1)
+    time.sleep(0.1)
     GPIO.output(focus_pin, False)
-    GPIO.output(focus_pin, False)
+    GPIO.output(picture_pin, False)
     return 'Picture Taken!'
 
 
