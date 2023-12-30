@@ -22,7 +22,7 @@ def take_picture():
 
 
 if __name__ == '__main__':
-    GPIO.setmode(GPIO.BOARD)
+    GPIO.setmode(GPIO.BCM)
     GPIO.setup(focus_pin, GPIO.OUT)
     GPIO.setup(picture_pin, GPIO.OUT)
 
