@@ -1,5 +1,6 @@
 import os.path
 import time
+import requests
 
 import cv2
 
@@ -8,6 +9,8 @@ from CnnModel import CnnModel
 IMAGE_COUNTER = 0
 TIMEOUT = 0.3
 SENSITIVITY = 2000000
+
+URL = "http://192.168.1.32:5000/take_picture"
 
 
 def return_camera_indexes():
@@ -42,6 +45,7 @@ def detect_birds(capture_device, cnn_model, output_directory_path):
             img_name = "bird_picture_{}.png".format(IMAGE_COUNTER)
             path = os.path.join(output_directory_path, img_name)
             cv2.imwrite(path, rotated_image)
+            requests.get(URL)
             IMAGE_COUNTER += 1
             time.sleep(TIMEOUT)
             if IMAGE_COUNTER > 2000:
@@ -57,6 +61,7 @@ def create_run_directory():
 
 
 if __name__ == '__main__':
+    requests.get(URL)
     model = CnnModel()
     cap = cv2.VideoCapture(0)
 

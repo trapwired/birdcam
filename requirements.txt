@@ -8,3 +8,4 @@ onnxruntime
 scipy
 flask
 RPi.GPIO
+requests
