@@ -3,8 +3,8 @@ import time
 from flask import Flask
 import RPi.GPIO as GPIO
 
-focus_pin = 23
-picture_pin = 24
+focus_pin = 20
+picture_pin = 21
 
 app = Flask(__name__)
 
