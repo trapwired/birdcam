@@ -4,7 +4,7 @@ from flask import Flask
 import RPi.GPIO as GPIO
 
 focus_pin = 4
-picture_pin = 5
+picture_pin = 17
 
 app = Flask(__name__)
 
