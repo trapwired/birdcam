@@ -61,7 +61,6 @@ def create_run_directory():
 
 
 if __name__ == '__main__':
-    requests.get(URL)
     model = CnnModel()
     cap = cv2.VideoCapture(0)
 
